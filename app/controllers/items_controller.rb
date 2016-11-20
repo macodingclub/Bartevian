@@ -31,11 +31,11 @@ class ItemsController < ApplicationController
 			redirect_to item_path(@item)
 
 		end
-
 	end
 
 	def destroy
-
+		@item.destroy
+		redirect_to root_path
 	end
 
 	private
