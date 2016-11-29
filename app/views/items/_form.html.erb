@@ -1,7 +1,7 @@
 <%= simple_form_for @item do |f| %>
-<%= f.input :title, lable: "Item Title" %>
-<%= f.input :description %>
-<%= f.input :price %>
+<%= f.input :title %>
+<%= f.input :description ,  input_html: { class: 'red' } %>
+<%= f.input :price, input_html: {class: 'skyblue'} %>
 <%= f.button :submit %>
 	
 <% end %>
