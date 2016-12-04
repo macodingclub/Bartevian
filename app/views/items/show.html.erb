@@ -1,7 +1,56 @@
-<h2><%= @item.title %></h2>
-<p><%= @item.description %></p>
-<h6>Price: <%= @item.price %> US$</h6>
+<div class="col-md-9">
 
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_item_path(@item) %>
-<%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure" } %>
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right"><%= @item.price %>US$</h4>
+                        <h4><a href="#"><%= @item.title %></a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p> <%= @item.description %> </p>
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">3 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                </div>
+
+                <div class="well">
+
+                    <div class="text-right">
+                        <a class="btn btn-success">Leave a Review</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">10 days ago</span>
+                            <p>This product was great in terms of quality. I would definitely buy another!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                </div>
+                    <%= link_to "Back", root_path, :class => 'btn btn-secondary custom-btn' %>
+                    <%= link_to "Edit", edit_item_path(@item), :class => 'btn btn-secondary custom-btn' %>
+                    <%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure" }, :class => 'btn btn-secondary custom-btn' %>
+            </div>
+

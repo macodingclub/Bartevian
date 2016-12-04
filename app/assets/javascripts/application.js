@@ -15,3 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+if($('#item_title').val() ==  "" || $('#item_description').val()=="" || $('#item_price').val() == "price" )
+    $('#submitButtonId').attr('disabled', true);
+
