@@ -55,11 +55,23 @@ ul.navbar-nav li a {
   border-bottom: 3px solid white;
   display: block;
   font-size: 20px;
+  padding-left: 0;
   width: 100%;
+}
+.navbar-inverse ul.navbar-nav li a:hover {
+  color:#E83E00;
+  border-bottom: 3px solid #E83E00;
+  padding-left: 0;
 }
 
 a {
   text-decoration: none;
 }
 
+/***Side Menu***/
+
+div.list-group a.list-group-item:hover {
+  background-color:#E83E00;
+  color:white;
+}
 /*** Main ***/
