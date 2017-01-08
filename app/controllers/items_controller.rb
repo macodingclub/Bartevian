@@ -10,12 +10,12 @@ class ItemsController < ApplicationController
 
 	def new
 	  @item = Item.new
-		@categories = Category.all.map{ |c| [c.name, c.id] }
+		#@categories = Category.all.map{ |c| [c.name, c.id] }
 	end
 
 	def create
 	  @item = Item.new(item_params)
-		@item.category_id = params[:category_id]
+		#@item.category_id = params[:category_id]
 
 	  if @item.save
 	  	redirect_to root_path
