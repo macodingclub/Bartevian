@@ -9,13 +9,13 @@ class ItemsController < ApplicationController
 	end
 
 	def new
-	  @item = Item.new
-		#@categories = Category.all.map{ |c| [c.name, c.id] }
+	  @item = current_user.items.build
+		@categories = Category.all.map{ |c| [c.name, c.id] }
 	end
 
 	def create
-	  @item = Item.new(item_params)
-		#@item.category_id = params[:category_id]
+	  @item = current_user.items.build(item_params)
+		@item.category_id = params[:category_id]
 
 	  if @item.save
 	  	redirect_to root_path
@@ -25,10 +25,11 @@ class ItemsController < ApplicationController
 	end
 
 	def edit
-
+		@categories = Category.all.map{ |c| [c.name, c.id] }
 	end
 
 	def update
+	@item.category_id = params[:category_id]
 		if @item.update(item_params)
 			redirect_to item_path(@item)
 
@@ -43,7 +44,7 @@ class ItemsController < ApplicationController
 	private
 
 	def item_params
-	  params.require(:item).permit(:title, :description, :price)
+	  params.require(:item).permit(:title, :description, :price, :category_id)
 	end
 
 	def find_item

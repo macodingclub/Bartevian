@@ -29,22 +29,24 @@
                 </div>
 
                 <div class="row custom-background">
-
-					 <% @items.each do |item| %>
-
-											<div class="col-sm-4 col-lg-4 col-md-4">
-												 <div class="thumbnail">
-													 <img src="http://placehold.it/320x150" alt="">
-													 <div class="caption">
-														 <h4 class="pull-right">$74.99</h4>
-														 <h4>
-														 <%= link_to item.title, item_path(item) %>
-														 </h4>
-													 </div>
-												 </div>
-											 </div>
-					 <% end %>
+                 <% @items.each do |item| %>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                         <div class="thumbnail">
+                             <img src="http://placehold.it/320x150" alt="">
+                             <div class="caption">
+                                 <h4 class="pull-right">
+                                    $ <%= item.price %>
+                                 </h4>
+                                 <h4>
+                                 <%= link_to item.title, item_path(item) %>
+                                 </h4>
+                             </div>
+                         </div>
+                     </div>
+                 <% end %>
                 </div>
+               <% if user_signed_in? %>
                     <%= link_to "Add New Item", {controller: "items", action: "new"}, class: "btn btn-secondary custom-btn" %>
+               <% end %>
             </div>
 
