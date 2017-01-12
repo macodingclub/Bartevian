@@ -2,7 +2,12 @@ class ItemsController < ApplicationController
 	before_action :find_item, only: [:show, :edit, :update, :destroy]
 
 	def index
-	  @items = Item.all.order("price DESC")
+		if params[:category].blank?
+	   @items = Item.all.order("price DESC")
+	  else
+		 @category_id = Category.find_by(name: params[:category]).id
+		 @items = Item.where(:category_id => @category_id).order("price DESC")
+	  end
 	end
 
 	def show

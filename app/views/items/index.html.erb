@@ -29,6 +29,7 @@
                 </div>
 
                 <div class="row custom-background">
+                  <h1 class="current-category"><%= params[:category] %></h1>
                  <% @items.each do |item| %>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                          <div class="thumbnail">
@@ -49,4 +50,3 @@
                     <%= link_to "Add New Item", {controller: "items", action: "new"}, class: "btn btn-secondary custom-btn" %>
                <% end %>
             </div>
-
