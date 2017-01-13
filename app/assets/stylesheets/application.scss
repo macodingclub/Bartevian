@@ -37,6 +37,7 @@ div.navbar-header a {
   font-family: 'Lobster Two', cursive;
 }
 nav.navbar-inverse{
+  background-color:#48818c;
   filter:alpha(opacity=95); /* IE */
   -moz-opacity:0.95; /* Mozilla */
   opacity: 0.95; /* CSS3 */
@@ -52,16 +53,16 @@ ul.navbar-nav li{
 }
 
 ul.navbar-nav li a {
-  border-bottom: 3px solid white;
+  // border-bottom: 3px solid white;
   display: block;
   font-size: 20px;
-  padding-left: 0;
+  padding-left: 5px;
   width: 100%;
 }
 .navbar-inverse ul.navbar-nav li a:hover {
-  color:#E83E00;
-  border-bottom: 3px solid #E83E00;
-  padding-left: 0;
+  // color: white ;
+  // border-bottom: 3px solid #E83E00;
+  padding-left: 5px;
 }
 
 a {
@@ -70,19 +71,21 @@ a {
 
 /***Side Menu***/
 
-div.list-group a.list-group-item:hover {
-  background-color:#E83E00;
-  color:white;
-}
+// div.list-group a.list-group-item:hover {
+//   background-color:#48818c;
+//   color:white;
+// }
 /*** Main ***/
 ul.nav ul.dropdown-menu {
   margin-right: -100px;
 }
 
 ul.nav ul.dropdown-menu li a{
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 ul.nav ul.dropdown-menu li a:hover{
-  padding-left: 5px;
+  padding-left: 20px;
+  background-color:#48818c
+;
 }
