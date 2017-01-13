@@ -46,17 +46,15 @@
                           <% if user_signed_in? %>
                              <li class="pull-right"> <%= link_to "Add Item", new_item_path %></li>
                           <% end %>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
+                      <li class="dropdown pull-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <% Category.all.each do |category| %>
-                          <li>
-                          <%= link_to category.name, items_path(category.name), class: "link" %>
-                          </li>
-                          <% end %>
-                        </ul>
+                            <ul class="dropdown-menu" role="menu">
+                              <% Category.all.each do |category| %>
+                                  <li>
+                                  <%= link_to category.name, items_path(category.name), class: "link" %>
+                                  </li>
+                              <% end %>
+                            </ul>
                       </li>
                     </ul>
                 </div>
