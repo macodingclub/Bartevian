@@ -1,30 +1,21 @@
-            <div class="col-md-9">
-                <div class="row carousel-holder">
-                    <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="Bartevian.jpg" alt="Bartevian store" height="200" width="700">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
+<div class="col-md-9">
+    <div class="row carousel-holder">
+        <div class="col-md-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="slide-image" src="Bartevian.jpg" alt="Bartevian store" height="200" width="700">
+                    </div>
+                    <div class="item">
+                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
@@ -48,7 +39,6 @@
                       </div>
                     </div>
                 </div>
-
                 <div class="row custom-background">
                   <h1 class="current-category"><%= params[:category] %></h1>
                   <% if @items.count == 0 %>
@@ -74,4 +64,14 @@
                <% if user_signed_in? %>
                     <%= link_to "Add New Item", {controller: "items", action: "new"}, class: "btn btn-secondary custom-btn" %>
                <% end %>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
+        </div>
+    </div>
+
+
