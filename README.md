@@ -21,10 +21,10 @@
 
 <h2 style = 'color:skyblue'>Install gem devise for login, logout</h2>
 <h4>
-    <p>gem 'devise', '~> 4.2'</p>
-    <p>rails g devise:install</p>
-    <p>rails g devise:views</p>
-    <p>rails g devise User</p>
+  ``` <p>gem 'devise', '~> 4.2'</p>
+  ``` <p>rails g devise:install</p>
+  ``` <p>rails g devise:views</p>
+  ``` <p>rails g devise User</p>
 </h4>
 <h2 style = 'color:skyblue'>Update DB with the new USER tables</h2>
 <h4>rake db:migrate</h4>
