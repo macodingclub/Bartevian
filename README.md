@@ -1,4 +1,14 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    body {background-color: powderblue;}
+    h2   {color: blue;}
+    </style>
+</head>
+<body>
 <h2>Generate connected DB and Model from the command line</h2>
 <h4>rails g model Book title:string description:text author: string price:integer</h4>
  <p>Book's Model is singular(book) and in the db is plural(books)</p>
@@ -70,6 +80,9 @@
     <p>rails db</p>
     <p>.tables</p>
 </h4>
+</body>
+</html>
+
 
 
 
