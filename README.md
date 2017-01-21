@@ -21,12 +21,11 @@
 
 <h2>Install gem devise for login, logout</h2>
 <h4>
-    gem 'devise', '~> 4.2'
-    rails g devise:install
-    rails g devise:views
-    rails g devise User
+    <p>gem 'devise', '~> 4.2'</p>
+    <p>rails g devise:install</p>
+    <p>rails g devise:views</p>
+    <p>rails g devise User</p>
 </h4>
-
 <h2>Update DB with the new USER tables</h2>
 <h4>rake db:migrate</h4>
 
@@ -34,41 +33,42 @@
 <h4>rails g migration add_user_id_to_items user_id:integer</h4>
 
 <h2>Connect with the DB through the console. Item is the DB-table</h2>
-<h4>rails c
-    Item.connection
-    Item – see all fields and types of fields
-    Item.first | Item.last | Item.find(3) – find by id
+<h4>
+    <p>rails c</p>
+    <p>Item.connection</p>
+    <p>Item – see all fields and types of fields</p>
+    <p>Item.first | Item.last | Item.find(3) – find by id</p>
 </h4>
 
 <h2>Create variables with results from the DB query</h2>
 <h4>
-rails c
-Item.connection
-@book = Item.last
-@item.user_id = 1
-@item.save
+    <p>rails c</p>
+    <p>Item.connection</p>
+    <p>@book = Item.last</p>
+    <p>@item.user_id = 1</p>
+    <p>@item.save</p>
 </h4>
 <h2>In show.html.erb- Add the logic if the user is login</h2>
 <h4>
-<% if user_signed_in? %>
-<% if @item.user_id == current_user.id %>
-	<%= link_to “Edit”, edit_item_path(@item) %>
-	<%= link_to “Delete”, item_path(@item), method: :delete, data: { confirm: “Are you sure” } %>
-<% end %>
-<% end %>
+    <p><% if user_signed_in? %></p>
+    <p><% if @item.user_id == current_user.id %></p>
+    <p>	<%= link_to “Edit”, edit_item_path(@item) %></p>
+    <p>	<%= link_to “Delete”, item_path(@item), method: :delete, data: { confirm: “Are you sure” } %></p>
+    <p> <% end %></p>
+    <p><% end %></p>
 </h4>
 
 <h2>Connect with the DB through the console and add Categories manually</h2>
 <h4>
-rails c
-Category.connection
-Category.create(name: “Art”)
+    <p>rails c</p>
+    <p>Category.connection</p>
+    <p>Category.create(name: “Art”)</p>
 </h4>
 
 <h2>Write pure SQL to the DB</h2>
 <h4>
-rails db
-.tables
+    <p>rails db</p>
+    <p>.tables</p>
 </h4>
 
 
