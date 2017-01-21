@@ -17,7 +17,7 @@
 <h2> Install the gems, every time needs to be run when we installing new gems</h2>
 <h4>bundle install</h4>
 <h2>Install simple_form gems with incorporated bootstrap</h2>
-<h4>rails g simple_form:intall –bootstrap</h4>
+<h4>rails g simple_form:install –bootstrap</h4>
 
 <h2>Install gem devise for login, logout</h2>
 <h4>
