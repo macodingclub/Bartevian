@@ -1,18 +1,22 @@
 <div class="col-md-9">
-    <div class="thumbnail">
-      <%= image_tag @item.item_img.url(:item_show), class: "item-show" %>        
-        <div class="caption-full">
-            <h4 class="pull-right"><%= @item.price %>US$</h4>
-            <h4>
-                <a href="#"><%= @item.title %></a>
-            </h4>
-            <h4>
-               Category: <%= @item.category.name %>
-            </h4>
-            <p> <%= @item.description %> </p>
-        </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag @item.item_img.url(:item_show), class: "item-show" %>
     </div>
-        <%= link_to "Back", root_path, :class => 'btn btn-secondary custom-btn' %>
+    <div class="col-md-8">
+      <div class="caption-full">
+        <h4 class="pull-right"><%= @item.price %>US$</h4>
+          <h4>
+            <a href="#"><%= @item.title %></a>
+          </h4>
+        <h4>
+               Category: <%= @item.category.name %>
+        </h4>
+          <p> <%= @item.description %> </p>
+      </div>
+    </div>
+  </div>
+    <%= link_to "Back", root_path, :class => 'btn btn-secondary custom-btn' %>
 
       <% if user_signed_in? %>
 
