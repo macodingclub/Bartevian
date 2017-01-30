@@ -36,6 +36,9 @@ gem 'high_voltage', '~> 3.0.0'
 #Adding bootstrap-glyphicons
 gem 'bootstrap-glyphicons'
 
+#Adding Tooltip
+gem 'bootstrap-tooltip-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

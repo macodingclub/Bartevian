@@ -26,7 +26,7 @@
         <div class="col-lg-4">
           <h2>
 	          	<div class="circle">
-	   				<%= link_to page_path('about'), :class => '' do %>
+	   				<%= link_to page_path('about'), :class => '', :rel => 'tooltip', :title =>'Learn more' do %>
 					    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
 					<% end %>
 				</div>
@@ -46,7 +46,7 @@
         <div class="circle">  
           <h2>
           	<div class="circle">
-             	<%= link_to items_path('index'), :class => '' do %>
+             	<%= link_to items_path('index'), :class => '', :rel => 'tooltip', :title =>'See products' do %>
 				    <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
 				<% end %>
 			</div>	
@@ -58,7 +58,7 @@
           	</p>
           <p>
          	<%= link_to items_path('index'), :class => 'btn btn-default' do %>
-			    See products »
+			    See Products »
 			<% end %>
           </p>
           
@@ -66,7 +66,7 @@
         <div class="col-lg-4">
           <div class="circle">
 	          <h2>
-	          	<%= link_to page_path('contact'), :class => '' do %>
+	          	<%= link_to page_path('contact'), :class => '', :rel => 'tooltip', :title =>'Contact us' do %>
 				    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 				<% end %>
 	          </h2>
@@ -92,5 +92,9 @@
 <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 	<span class="glyphicon glyphicon-chevron-right"></span>
 </a>
-			
+<script>
+	$(function(){
+  $("a[rel='tooltip']").tooltip();
+})
+</script>			
 		
