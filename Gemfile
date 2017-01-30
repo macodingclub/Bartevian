@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 #Gem for about page
 gem 'high_voltage', '~> 3.0.0'
 
+#Adding bootstrap-glyphicons
+gem 'bootstrap-glyphicons'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

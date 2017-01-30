@@ -26,20 +26,21 @@
         </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-            	<li>
-            		<%= link_to 'Home', root_path %>
+            <ul class="nav navbar-nav">.          	
+            	<li>         		
+				 <%= link_to root_path, :class => '' do %>
+				    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+				<% end %>
             	</li>
-              <li>
-                  <%= link_to 'About', page_path('about') %>
-              </li>
-              <li>
-              	<%= link_to 'Contact', page_path('contact') %>
-              </li>
+            	<li>
+   					<%= link_to 'About', page_path('about') %>
+              </li> 
              <li>
              	<%= link_to 'Store', items_path('index') %>
              </li>
-
+              <li>
+              	<%= link_to 'Contact', page_path('contact') %>
+              </li>
                     <% if user_signed_in? %>
                         <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
                      <% else %>

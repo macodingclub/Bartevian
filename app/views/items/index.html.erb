@@ -1,36 +1,28 @@
-    <div class="row custom-background">
-      <h1 class="current-category"><%= params[:category] %></h1>
-      <% if @items.count == 0 %>
-        <h3>There is no items curently in this category</h3>
-      <% else %>
+ <div class="row custom-background">
+ 	<h1 class="current-category"><%= params[:category] %></h1>
+    	<% if @items.count == 0 %>
+        	<h3>There is no items curently in this category</h3>
+     	<% else %>
      <% @items.each do |item| %>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-          <div class="thumbnail">
-            <div class="caption">
-              <a href="/items/<%= item.id %>">
-                <%= image_tag item.item_img.url(:item_index) %>
-              </a>
-              <h4 class="pull-right">
-                $ <%= item.price %>
-              </h4>
-               </div>
+     	<div class="col-sm-4 col-lg-4 col-md-4">
+        	<div class="thumbnail">
+            	<div class="caption">
+	              	<a href="/items/<%= item.id %>">
+	                	<%= image_tag item.item_img.url(:item_index) %>
+	              	</a>
+	              	<h4 class="pull-right">
+	                	$ <%= item.price %>
+	              	</h4>
+                </div>
              </div>
          </div>
-         <% end %>
+      	<% end %>
      <% end %>
-    </div>
+</div>
+<div>
    <% if user_signed_in? %>
         <%= link_to "Add New Item", {controller: "items", action: "new"}, class: "btn btn-secondary custom-btn" %>
    <% end %>
-    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-</div>
-</div>
 </div>
 
-</div>
 

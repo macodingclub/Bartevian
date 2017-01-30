@@ -1,4 +1,4 @@
-<div class="col-md-9">
+<div class="col-md-12">
     <div class="row carousel-holder">
         <div class="col-md-12">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -9,40 +9,88 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="slide-image" src="Bartevian.jpg" alt="Bartevian store" height="200" width="700">
+                        <img class="slide-image" src="http://lorempixel.com/1050/300">
                     </div>
                     <div class="item">
-                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                        <img class="slide-image" src="http://lorempixel.com/1050/300" /> 
                     </div>
                     <div class="item">
-                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                        <img class="slide-image" src="http://lorempixel.com/1050/300" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+
+    <div class="row mt-3">
         <div class="col-lg-4">
-          <img class="img-circle " src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>
-          	<%= link_to 'About', page_path('about') %>
+	          	<div class="circle">
+	   				<%= link_to page_path('about'), :class => '' do %>
+					    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+					<% end %>
+				</div>
+			<div>	
           </h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. 
+          	Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, 
+          	.porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+          	</p>
+          <p>
+			<%= link_to page_path('about'), :class => 'btn btn-default' do %>
+			   Lear more »
+			<% end %>          	
+          </p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Store</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        <div class="circle">  
+          <h2>
+          	<div class="circle">
+             	<%= link_to items_path('index'), :class => '' do %>
+				    <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+				<% end %>
+			</div>	
+          </h2>
+         </div> 
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
+          	eget lacinia odio sem nec elit. Cras mattis consectetur purus sit 
+          	amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          	</p>
+          <p>
+         	<%= link_to items_path('index'), :class => 'btn btn-default' do %>
+			    See products »
+			<% end %>
+          </p>
+          
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>
-          	<%= link_to 'Contact us', page_path('contact') %>
-          </h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          <div class="circle">
+	          <h2>
+	          	<%= link_to page_path('contact'), :class => '' do %>
+				    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+				<% end %>
+	          </h2>
+          </div>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
+          	 egestas eget quam. Vestibulum id ligula porta felis euismod semper. 
+          	 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, 
+          	 ut fermentum massa justo sit amet risus.
+          </p>
+          <p>
+      		 <%= link_to page_path('contact'), :class => 'btn btn-default' do %>
+			   Contact us » 
+			<% end %>
+          </p>
         </div><!-- /.col-lg-4 -->
       </div>
     </div>
+ </div>   
+    	
+<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+			
+		
