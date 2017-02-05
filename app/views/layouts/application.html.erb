@@ -64,10 +64,10 @@
                           <% end %>
                         </ul>
                   </li>
-     <%= form_tag(items_path, :method => "get", id: "search-form") do %>
-	    <%= text_field_tag  :search, params[:search], class: "form-control", placeholder: "Search Your Antique" %>
-	    <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-	<% end %>
+			     <%= form_tag(items_path, :method => "get", id: "search-form") do %>
+				    <%= text_field_tag  :search, params[:search], class: "form-control search_antique", placeholder: "Search Your Antique" %>
+				    <%= submit_tag "Search", :name => nil, class: "btn btn-default pull-right" %>
+				<% end %>
                 </ul>
             </div>
 
