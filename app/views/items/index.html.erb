@@ -24,5 +24,8 @@
         <%= link_to "Add New Item", {controller: "items", action: "new"}, class: "btn btn-secondary custom-btn" %>
    <% end %>
 </div>
-
-
+<div>
+<% if @items.blank? %>
+  <h4>There are no such items <%= params[:search] %>.</h4>
+<% end %>
+</div>

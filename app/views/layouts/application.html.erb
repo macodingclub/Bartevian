@@ -60,6 +60,10 @@
                           <% end %>
                         </ul>
                   </li>
+                  	<%= form_tag(items_path, :method => "get", id: "search-form") do %>
+	    <%= text_field_tag :search, params[:search], placeholder: "Search Your Antique" %>
+	    <%= submit_tag "Search", :name => nil %>
+	<% end %>
                 </ul>
             </div>
 
@@ -100,4 +104,5 @@
 
     </div>
   </body>
+
 </html>

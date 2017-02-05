@@ -8,7 +8,15 @@ class ItemsController < ApplicationController
 		 @category_id = Category.find_by(name: params[:category]).id
 		 @items = Item.where(:category_id => @category_id).order("price DESC")
 	  end
-	end
+
+      @items = Item.all
+      if params[:search]
+        @items = Item.search(params[:search]).order("created_at DESC")
+      else
+        @items = Item.all.order("created_at DESC")
+      end
+    end
+	
 
 	def show
 	end
