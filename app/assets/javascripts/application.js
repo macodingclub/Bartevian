@@ -16,8 +16,27 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-
+//= require underscore
+//= require gmaps/google
 
 if($('#item_title').val() ==  "" || $('#item_description').val()=="" || $('#item_price').val() == "price" )
     $('#submitButtonId').attr('disabled', true);
+    
+/*
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'geolocation'} }, function(){
+  // be aware chrome >= 50 requires https for geolocation to work
+  if(navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(displayOnMap);
+});
+
+function displayOnMap(position){
+  var marker = handler.addMarker({
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  });
+  handler.map.centerOn(marker);
+};*/
+
+  
 
