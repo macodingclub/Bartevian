@@ -154,6 +154,19 @@ ul.nav ul.dropdown-menu li a:hover{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-.search_antique {
-  width: 800px;
+.antique_form {
+  display: inline-block;
+  width: 25%;
+}
+.antique_search {
+  display: inline-block;
+  width: 40%;
+} 
+
+
+$ten_pixels : 10px;
+
+.antique_sendButton {
+  background-color: transparent;
+  margin-left: 50% $ten_pixels
 }
