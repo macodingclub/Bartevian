@@ -1,35 +1,22 @@
 <div class="col-md-12">
-  <div class="row">
     <div class="col-md-4">
       <%= image_tag @item.item_img.url(:item_show), class: "item-show" %>
-    </div>
-    <div class="col-md-8">
- 	<div class ="row">
- 		<div class = "col-md-8">
+ 	</div>
+ 	<div class = "col-md-8">
       <div class="caption-full">
-        <div class="">Price: <%= @item.price %>US$
-          <h4>
-            <a href="#"><%= @item.title %></a>
-          </h4>
-        </div>
-        <div class="col-md-4">
-               Category: <%= @item.category.name %>
-          <p> <%= @item.description %> </p>
-          </div>
-      </div>
-    </div>
-  </div>
-  </div>
-    <%= link_to "Back", root_path, :class => 'btn btn-secondary custom-btn' %>
-
+          <p>Price: <%= @item.price %>US$</p>
+          <p>Title:  <%= @item.title %></p>
+          <p>Category: <%= @item.category.name %></p>
+          <p>Description: <%= @item.description %> </p>
+  		</div>
+  	</div>
       <% if user_signed_in? %>
-
-          <% if @item.user_id == current_user.id %>
-
+        <% if @item.user_id == current_user.id %>
         <%= link_to "Edit", edit_item_path(@item), :class => 'btn btn-secondary custom-btn' %>
         <%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure" }, :class => 'btn btn-secondary custom-btn' %>
-
-          <% end %>
+        <% end %>
      <% end %>
 </div>
+<%= link_to "Back", root_path, :class => 'btn btn-secondary custom-btn' %>
+
 

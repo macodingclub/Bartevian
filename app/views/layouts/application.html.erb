@@ -30,14 +30,13 @@
         </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-            	          	
+            <ul class="nav navbar-nav my-navigation"">
             	<li>         		
 				 <%= link_to root_path, :class => '' do %>
 				    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 				<% end %>
             	</li>
-            	<li>
+              <li>
    					<%= link_to 'About', page_path('about') %>
               </li> 
              <li>
@@ -46,15 +45,6 @@
               <li>
               	<%= link_to 'Contact', page_path('contact') %>
               </li>
-                    <% if user_signed_in? %>
-                        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-                     <% else %>
-                        <li ><%= link_to "Log In", new_user_session_path %></li>
-                        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-                    <% end %>
-                      <% if user_signed_in? %>
-                         <li> <%= link_to "Add Item", new_item_path %></li>
-                      <% end %>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -68,7 +58,16 @@
 			     <%= form_tag(items_path, :method => "get", id: "search-form", class: "antique_form") do %>
 				    <%= text_field_tag  :search, params[:search], class: "form-control antique_search", placeholder: "Search item" %>
 				    <%= submit_tag "Search", :name => nil, class: "btn btn-default antique_sendButton" %>
-				<% end %>                  
+				<% end %>
+				     <% if user_signed_in? %>
+                        <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+                     <% else %>
+                        <li class="pull-right"><%= link_to "Log In", new_user_session_path %></li>
+                        <li class="pull-right"><%= link_to "Sign Up", new_user_registration_path %></li>
+                    <% end %>
+                    <% if user_signed_in? %>
+                        <li> <%= link_to "Add Item", new_item_path %></li>
+                    <% end %>                  
                 </ul>
             </div>
 
