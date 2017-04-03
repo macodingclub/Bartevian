@@ -99,3 +99,28 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+PostgreSQL local configuration: 
+
+===========================================
+sudo apt-get install postgresql
+export DATABASE_URL=postgres:///$(whoami)
+sudo -u postgres createuser -s $(whoami); createdb $(whoami)
+bundle install
+
+===========================================
+to completely remove postgreSQL: 
+ps -C postgres
+...if shows processes, then: 
+sudo killall postgres
+ps -C postgres
+…if there are no mo running processes, then: 
+
+sudo apt-get --purge remove postgresql\*
+sudo rm -r /etc/postgresql/
+sudo rm -r /etc/postgresql-common/
+sudo rm -r /var/lib/postgresql/
+udo userdel -r postgres
+sudo groupdel postgres
+
+===========================================
